@@ -1,0 +1,124 @@
+.movie {
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+  max-height: 218px;
+  width: 100%;
+  background: #FDFDFD;
+  filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.05));
+}
+
+.movie__image {
+  max-width: 270px;
+  max-height: 151px;
+  background: lightgray 50%;
+  background: no-repeat;
+}
+
+.movie__title-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px 12px 0;
+}
+
+.movie__title {
+  max-width: 206px;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: clip;
+}
+
+.movie__save {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: url(../../images/save8d.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position-y: 25%;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
+}
+
+.movie__save:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.movie__save_active {
+  background: url(../../images/save8.svg);
+  background-position: center;
+  background-position-y: 25%;
+}
+
+.movie__delete {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: url(../../images/delete.svg);
+  background-position: center;
+}
+
+.movie__delete:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.movie__time {
+  margin: 10px 0 14px 12px;
+  padding: 0;
+  color: #A0A0A0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .movie {
+    max-width: 339px;
+    max-height: 257px;
+  }
+
+  .movie__image {
+    max-width: 339px;
+    max-height: 190px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+  .movie {
+    max-width: calc(300px + (339 - 300) * (100vw - 320px) / (768 - 320));
+    max-height: calc(235px + (257 - 235) * (100vw - 320px) / (768 - 320));
+  }
+
+  .movie__image {
+    max-width: calc(300px + (339 - 300) * (100vw - 320px) / (768 - 320));
+    max-height: calc(168px + (190 - 168) * (100vw - 320px) / (768 - 320));
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .movie {
+    max-width: 300px;
+    max-height: 235px;
+  }
+
+  .movie__image {
+    max-width: 300px;
+    max-height: 168px;
+  }
+}
