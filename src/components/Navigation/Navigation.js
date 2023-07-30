@@ -6,19 +6,20 @@ import MenuBurger from "../MenuBurger/MenuBurger";
 function Navigation({ isLoggedIn }) {
   const location = useLocation();
   return (
-    <nav>
+    <nav className="navigation">
       {!isLoggedIn ?
         (<div className="navigation__main">
           <Link className="navigation__register" to="/signup">
             Регистрация
           </Link>
-          <Link to="/signin">
-            <button className="navigation__enter">Войти</button>
+          <Link className="navigation__enter" to="/signin">
+            Войти
           </Link>
         </div>)
         :
         (<>
           <MenuBurger />
+          <div className="navigation__overlay"></div>
           <div className="navigation__movie">
             <div className="navigation__movie-group">
               <Link className={`navigation__movies_main ${
@@ -39,11 +40,10 @@ function Navigation({ isLoggedIn }) {
                   : "navigation__movies"}`} to="/saved-movies">
                 Сохранённые фильмы
               </Link>
-
             </div>
-            <Link to="/profile">
-                <button className="navigation__profile">Аккаунт</button>
-              </Link>
+            <Link className="navigation__profile" to="/profile">
+              Аккаунт
+            </Link>
           </div>
         </>)
       }

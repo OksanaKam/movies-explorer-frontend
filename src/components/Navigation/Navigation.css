@@ -27,8 +27,11 @@
 .navigation__enter {
   width: 76px;
   height: 32px;
-  margin: 21px 0 21px 0;
+  margin: 21px 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 3px;
   background: #2BE080;
@@ -38,6 +41,7 @@
   font-size: 12px;
   line-height: 16px;
   color: #000;
+  text-decoration: none;
 }
 
 .navigation__enter:hover {
@@ -51,6 +55,18 @@
   justify-content:space-between;
   max-width: 676px;
   width: 100%;
+}
+
+.navigation__overlay {
+  opacity: 0.3;
+  background: #000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 100%;
+  z-index: 1;
+  display: none;
 }
 
 .navigation__movie-group {
@@ -95,6 +111,9 @@
   height: 32px;
   margin: 21px 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 20px;
   background: #f9f9f9;
   border: none;
@@ -105,6 +124,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
+  text-decoration: none;
 }
 
 .navigation__profile:hover {
@@ -167,6 +187,8 @@
   }
 
   .navigation__profile {
+    max-height: 32px;
+    height: 100%;
     margin-top: 0;
     margin-bottom: 90px;
   }

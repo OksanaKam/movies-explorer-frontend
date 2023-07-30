@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 function MoviesCardList({ movies } ) {
   let location = useLocation();
   return (
-    <div className="movie-list">
+    <section className="movie-list">
       <ul className="movie-list__container">
         {movies.map((movie) => {
           return(
@@ -17,7 +17,7 @@ function MoviesCardList({ movies } ) {
       {location.pathname === "/movies" &&
         <button className="movie-list__button" type="button">Ещё</button>
       }
-    </div>
+    </section>
   );
 }
 

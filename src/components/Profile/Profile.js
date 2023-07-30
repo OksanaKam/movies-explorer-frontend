@@ -8,49 +8,46 @@ function Profile() {
   let location = useLocation();
   const isLoggedIn = location.pathname === "/" ? false : true;
   return (
-    <>
+    <main>
       <Header isLoggedIn={isLoggedIn} />
       <section className="profile">
-        <h2 className="profile__title">Привет, Виталий!</h2>
+        <h1 className="profile__title">Привет, Виталий!</h1>
         <form className="profile__form"
               name="profile-form"
               action="#"
               noValidate>
-          <label className="profile__info-key">Имя</label>
-          <input className="profile__info-value"
-                 id="name"
-                 name="name"
-                 type="text"
-                 value="Виталий"
-                 minLength="2"
-                 maxLength="30"
-                 placeholder="Имя"
-                 disabled
-                 required />
+          <div className="profile__name">
+            <label className="profile__info-key">Имя</label>
+            <input className="profile__info-value"
+                   id="name"
+                   name="name"
+                   type="text"
+                   value="Виталий"
+                   minLength="2"
+                   maxLength="30"
+                   placeholder="Имя"
+                   disabled
+                   required />
+          </div>
+          <div className="profile__email">
+            <label className="profile__info-key">E-mail</label>
+            <input className="profile__info-value"
+                   id="email"
+                   name="email"
+                   type="email"
+                   minLength="2"
+                   placeholder="Электронная почта"
+                   value="pochta@yandex.ru"
+                   disabled
+                   required />
+          </div>
+          <button className="profile__edit" type="submit">Редактировать</button>
         </form>
-        <hr className="profile__line"/>
-        <form className="profile__form"
-              name="profile-form"
-              action="#"
-              noValidate>
-          <label className="profile__info-key">E-mail</label>
-          <input className="profile__info-value"
-                 id="email"
-                 name="email"
-                 type="email"
-                 minLength="4"
-                 maxLength="30"
-                 placeholder="Электронная почта"
-                 value="pochta@yandex.ru"
-                 disabled
-                 required />
-        </form>
-        <button className="profile__edit" type="submit">Редактировать</button>
         <Link className="profile__exit" to={'/'}>
           Выйти из аккаунта
         </Link>
       </section>
-    </>
+    </main>
   );
 }
 

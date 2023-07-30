@@ -4,8 +4,8 @@ import "./MenuBurger.css";
 function MenuBurger() {
   return (
     <>
-      <input className="menu-burger__checkbox" type="checkbox" name="" id=""/>
-      <label className="menu-burger">
+      <input className="checkbox" type="checkbox" name="checkbox" id="checkbox"/>
+      <label className="menu-burger" htmlFor="checkbox">
         <span className="menu-burger__line menu-burger__line1"></span>
         <span className="menu-burger__line menu-burger__line2"></span>
         <span className="menu-burger__line menu-burger__line3"></span>

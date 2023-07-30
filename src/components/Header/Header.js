@@ -5,7 +5,7 @@ import Logo from "../Logo/Logo";
 
 function Header({ isLoggedIn }) {
   return (
-    <header className={`header ${!isLoggedIn ? "header__main" : ""}`}>
+    <header className={`header ${!isLoggedIn ? "header_active" : ""}`}>
       <div className='header__group'>
         <Logo />
         <Navigation isLoggedIn={isLoggedIn} />

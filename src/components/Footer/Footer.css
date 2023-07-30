@@ -5,8 +5,10 @@
 }
 
 .footer__title {
+  max-width: 1140px;
+  width: 100%;
   margin: 79px auto 0;
-  padding: 0;
+  padding: 0 0 20px;
   color: #A0A0A0;
   text-align: center;
   font-feature-settings: 'clig' off, 'liga' off;
@@ -15,13 +17,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.footer__line {
-  max-width: 1140px;
-  width: 100%;
-  margin: 20px auto 0;
-  border: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
 }
 
 .footer__group {
@@ -80,7 +76,7 @@
       max-width: calc(768px + (1280 - 768) * (100vw - 768px) / (1280 - 768));
   }
 
-  .footer__line {
+  .footer__title {
     max-width: calc(708px + (1140 - 708) * (100vw - 768px) / (1280 - 768));
   }
 
@@ -96,7 +92,7 @@
     margin: 0;
   }
 
-  .footer__line {
+  .footer__title {
     max-width: 708px;
   }
 
@@ -121,9 +117,6 @@
 
   .footer__title {
     font-size: 12px;
-  }
-
-  .footer__line {
     max-width: 300px;
   }
 

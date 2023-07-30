@@ -5,7 +5,6 @@ function Footer() {
   return (
     <footer className="footer">
       <p className="footer__title">Учебный проект Яндекс.Практикум х BeatFilm.</p>
-      <hr className="footer__line"></hr>
       <div className="footer__group">
         <p className="footer__copyright">&copy; {new Date().getFullYear()}</p>
         <ul className="footer__menu">

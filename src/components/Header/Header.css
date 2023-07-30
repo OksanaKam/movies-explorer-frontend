@@ -1,4 +1,8 @@
-.header__main {
+.header {
+  background: #FFF;
+}
+
+.header_active {
   background: #465DFF;
 }
 

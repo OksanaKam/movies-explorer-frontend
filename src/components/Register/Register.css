@@ -5,7 +5,7 @@
 }
 
 .register__label {
-  margin: 18px 0 0;
+  margin: 0;
   padding: 0;
   color: #A0A0A0;
   font-family: 'Inter', Arial, sans-serif;
@@ -15,10 +15,6 @@
   line-height: normal;
 }
 
-.register__label:first-of-type {
-  margin-top: 0;
-}
-
 .register__input {
   height: 46px;
   margin: 10px 0 0;
@@ -26,7 +22,7 @@
   border-radius: 8px;
   background: #F9F9F9;
   color: #000;
-  font-family: Inter;
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -34,27 +30,23 @@
   border: none;
 }
 
-.register__input:hover {
-  outline: thin solid lightgray;
+.register__input:focus {
+  outline: 1px solid #2be080;
 }
 
 .register__input-error {
-  margin: 140px 0 0;
+  margin: 6px 0 0;
   color: #EE3465;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  position: absolute;
+  visibility: hidden;
 }
 
-.register__input-error:nth-of-type(2) {
-  margin-top: 227px;
-}
-
-.register__input-error:nth-of-type(3) {
-  margin-top: 323px;
+.register__input-error_active {
+  visibility: visible;
 }
 
 .register__question {
@@ -95,19 +87,11 @@
     margin-top: 54px;
     margin-bottom: 30px;
   }
-
+/*
   .register__input-error {
     margin-top: 180px;
   }
-
-  .register__input-error:nth-of-type(2) {
-    margin-top: 267px;
-  }
-
-  .register__input-error:nth-of-type(3) {
-    margin-top: 362px;
-  }
-
+*/
   .register__question {
     margin-top: 14px;
     font-size: 12px;

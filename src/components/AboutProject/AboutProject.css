@@ -11,7 +11,7 @@
   max-width: 1140px;
   width: 100%;
   margin: 110px auto 0;
-  padding: 0;
+  padding: 0 0 24px;
   color: #000;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 22px;
@@ -19,13 +19,7 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.88px;
-}
-
-.about-project__line {
-  max-width: 1140px;
-  width: 100%;
-  border: 1px solid #000;
-  margin: 23px auto 0;
+  border-bottom: 1px solid #000;
 }
 
 .about-project__description {
@@ -148,10 +142,6 @@
     margin-top: calc(90px + (110 - 90) * (100vw - 768px) / (1280 - 768));
   }
 
-  .about-project__line {
-    max-width: calc(668px + (1140 - 668) * (100vw - 768px) / (1280 - 768));
-  }
-
   .about-project__heading {
     max-width: calc(319px + (550 - 319) * (100vw - 768px) / (1280 - 768));
   }
@@ -177,10 +167,6 @@
   .about-project__title {
     max-width: 668px;
     margin-top: 90px;
-  }
-
-  .about-project__line {
-    max-width: 668px;
   }
 
   .about-project__description {
@@ -252,13 +238,8 @@
     margin-top: 70px;
     font-size: 18px;
     letter-spacing: -0.72px;
+    padding-bottom: 29px;
   }
-
-  .about-project__line {
-    max-width: 284px;
-    margin-top: 28px;
-  }
-
   .about-project__description {
     flex-direction: column;
     margin-top: 60px;

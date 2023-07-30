@@ -31,7 +31,7 @@ function Portfolio() {
         </li>
         <li className="portfolio__link-set">
           <a className="portfolio__link"
-             href="https://oksanakam.nomoreparties.sbs"
+             href="https://oksanakam.github.io/mesto-react/"
              target="_blank"
              rel="noreferrer">
             Одностраничное приложение

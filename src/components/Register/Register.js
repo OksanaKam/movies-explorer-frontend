@@ -5,10 +5,11 @@ import Logo from "../Logo/Logo";
 import Form from "../Form/Form";
 
 function Register() {
+  let isErrorActive = true;
   return (
-    <section className="register">
+    <main className="register">
       <Logo />
-      <Form title="Добро пожаловать!" button="Зарегистрироваться">
+      <Form title="Добро пожаловать!" button="Зарегистрироваться" name="register">
         <label className="register__label">Имя</label>
         <input className="register__input"
                id="name"
@@ -18,17 +19,22 @@ function Register() {
                maxLength="30"
                placeholder="Имя"
                required />
-        <span className="register__input-error">Что-то пошло не так</span>
+        <span className={`register__input-error ${isErrorActive
+              ? "register__input-error_active" : ""}`}>
+                Что-то пошло не так
+        </span>
         <label className="register__label">E-mail</label>
         <input className="register__input"
                id="email"
                name="email"
                type="email"
-               minLength="4"
-               maxLength="30"
+               minLength="2"
                placeholder="Электронная почта"
                required />
-        <span className="register__input-error">Что-то пошло не так</span>
+        <span className={`register__input-error ${isErrorActive
+              ? "register__input-error_active" : ""}`}>
+                Что-то пошло не так
+        </span>
         <label className="register__label">Пароль</label>
         <input className="register__input"
                id="password"
@@ -38,7 +44,10 @@ function Register() {
                maxLength="30"
                placeholder="Пароль"
                required />
-        <span className="register__input-error">Что-то пошло не так</span>
+        <span className={`register__input-error ${isErrorActive
+              ? "register__input-error_active" : ""}`}>
+                Что-то пошло не так
+        </span>
       </Form>
       <p className="register__question">
         Уже зарегистрированы?{" "}
@@ -46,7 +55,7 @@ function Register() {
         Войти
       </Link>
       </p>
-    </section>
+    </main>
   );
 }
 
