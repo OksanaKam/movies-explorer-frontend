@@ -11,6 +11,7 @@ import SavedMovies from "../SavedMovies/SavedMovies";
 import Profile from "../Profile/Profile";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import ProtectedRouteElement from "../ProtectedRoute/ProtectedRoute";
+import ClosedRouteElement from "../ClosedRoute/ClosedRoute";
 import * as auth from "../../utils/auth";
 import { ERRORS } from "../../utils/constants";
 import { ERROR_TEXT } from "../../utils/constants";
@@ -164,14 +165,16 @@ function App() {
       <div className="page">
         <Routes>
           <Route path="/" element={<Main isLoggedIn={isLoggedIn} />} />
-          <Route path="/signup"
-                 element={
-                 <Register handleRegister={handleRegister}
-                           errorMessage={errorMessage} />}/>
-          <Route path="/signin"
-                 element={
-                 <Login handleLogin={handleLogin}
-                        errorMessage={errorMessage} />}/>
+          <Route element={<ClosedRouteElement isLoggedIn={isLoggedIn} />}>
+            <Route path="/signup"
+                   element={
+                   <Register handleRegister={handleRegister}
+                             errorMessage={errorMessage} />}/>
+            <Route path="/signin"
+                   element={
+                   <Login handleLogin={handleLogin}
+                          errorMessage={errorMessage} />}/>
+          </Route>
           <Route path="/movies"
                  element={
                  <ProtectedRouteElement element={Movies}

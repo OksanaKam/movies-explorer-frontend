@@ -35,7 +35,7 @@ function Movies({ userMovies,
   const [count, setCount] = useState(CARDS_AMOUNT.SIXTEEN);
 
   useEffect(() => {
-    if (isLoading) {
+    if (isLoading && movies.length < 1) {
       movieApi.getInitialMovies()
       .then((res) => {
         setMovies(res);
@@ -44,7 +44,7 @@ function Movies({ userMovies,
         setErrorMessage(ERROR_TEXT.ERROR_HAS_OCCURED);
       });
     }
-  }, [isLoading, setMovies, setErrorMessage]);
+  }, [isLoading, movies, setMovies, setErrorMessage]);
 
   useEffect(() => {
     if (isLoading) {

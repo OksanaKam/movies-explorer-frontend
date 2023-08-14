@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Profile.css";
 import Header from "../Header/Header";
 import { useLocation } from "react-router-dom";
@@ -20,12 +20,19 @@ function Profile({
   let location = useLocation();
   const isLoggedIn = location.pathname === "/" ? false : true;
 
+  const [isDataChanged, setIsDataChanged] = useState(false);
+
   useEffect(() => {
     setFormValue({
         name: currentUser.name,
         email: currentUser.email
     });
   }, [currentUser, setFormValue]);
+
+  useEffect(() => {
+    currentUser.name !== formValue.name || currentUser.email !== formValue.email ?
+    setIsDataChanged(true) : setIsDataChanged(false);
+  }, [currentUser.name, currentUser.email, formValue.name, formValue.email]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -88,11 +95,10 @@ function Profile({
             </div>
             <span className="profile__error">{errorMessage}</span>
             {isEdit ? (
-              <button className={`profile__save ${isValid
-                                                  ? "profile__save_active"
-                                                  : ""}`}
+              <button className={
+                `profile__save ${isValid && isDataChanged ? "profile__save_active" : ""}`}
                       type="submit"
-                      disabled={!isValid}
+                      disabled={!isValid || !isDataChanged}
                       >Сохранить</button>
             )
             : (
