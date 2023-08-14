@@ -57,6 +57,18 @@
   opacity: 0.8;
 }
 
+.search-form__error {
+  margin: 5px auto 0;
+  min-height: 14px;
+  position: absolute;
+  color: #FF004C;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .search-form__short {
   display: flex;
   flex-direction: row;

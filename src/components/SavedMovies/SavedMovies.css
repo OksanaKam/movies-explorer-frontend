@@ -1,3 +1,12 @@
-.saves-movies {
-  margin-bottom: 170px;
+.saved-movies__not-found {
+  display: flex;
+  justify-content: center;
+  margin: 90px auto;
+  padding: 0;
+  color: #000;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }

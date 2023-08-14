@@ -21,3 +21,5 @@ https://github.com/OksanaKam/movies-explorer-frontend
 ## Ссылки на проект
 
 Frontend https://oksanakam.nomoredomains.xyz
+
+## Ссылка на пул реквест

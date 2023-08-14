@@ -17,6 +17,10 @@
   list-style: none;
 }
 
+.movie-list__container_nomore {
+  margin-bottom: 170px;
+}
+
 .movie-list__button {
   max-width: 1140px;
   height: 36px;

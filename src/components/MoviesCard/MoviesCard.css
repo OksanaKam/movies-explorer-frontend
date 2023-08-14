@@ -10,7 +10,9 @@
 
 .movie__image {
   max-width: 270px;
-  max-height: 151px;
+  width: 100%;
+  height: 151px;
+  object-fit: cover;
   background: lightgray 50%;
   background: no-repeat;
 }

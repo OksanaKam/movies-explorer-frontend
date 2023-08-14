@@ -15,6 +15,17 @@
   line-height: normal;
 }
 
+.form__error {
+  margin: 0 auto 0;
+  min-height: 14px;
+  color: #FF004C;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .form__button {
   width: 396px;
   height: 45px;
@@ -32,16 +43,29 @@
 }
 
 .form__button_register {
-  margin-top: 69px;
+  margin-top: 6px;
 }
 
 .form__button_login {
-  margin-top: 157px;
+  margin-top: 6px;
+}
+
+.form__error_register {
+  margin-top: 49px;
+}
+
+.form__error_login {
+  margin-top: 137px;
 }
 
 .form__button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.form__button_disabled {
+  background: #F8F8F8;
+  color: #C2C2C2;
 }
 
 @media screen and (max-width: 425px) {
