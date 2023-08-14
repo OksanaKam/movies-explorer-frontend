@@ -1,6 +1,4 @@
-import { MainURL } from "./constants";
-
-export const BASE_URL = MainURL;
+export const BASE_URL = 'https://api.oksanakam.nomoredomains.xyz';
 
 export function checkResponse(res) {
   if (res.ok) {
