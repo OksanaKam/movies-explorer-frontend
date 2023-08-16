@@ -35,7 +35,8 @@
 }
 
 .register__input-error {
-  margin: 6px 0 0;
+  height: 18px;
+  margin: 0;
   color: #EE3465;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 10px;

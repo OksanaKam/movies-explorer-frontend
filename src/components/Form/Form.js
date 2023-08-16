@@ -1,17 +1,19 @@
 import React from "react";
 import "./Form.css";
 
-function Form({title, button, name, children}) {
+function Form({onSubmit, isValid, title, button, errorName, errorMessage, children}) {
+
   return (
     <form className="form"
           name="form"
-          action="#"
-          method="get"
+          onSubmit={onSubmit}
           noValidate>
       <h1 className="form__title">{title}</h1>
       {children}
-      <button className={`form__button form__button_${name}`}
+      <span className={`form__error form__error_${errorName}`}>{errorMessage}</span>
+      <button className={`form__button form__button_${errorName} ${!isValid && 'form__button_disabled'}`}
               type="submit"
+              disabled={!isValid}
               aria-label="Зарегистрироваться">{button}</button>
      </form>
   );

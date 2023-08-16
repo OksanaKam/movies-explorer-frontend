@@ -8,11 +8,13 @@ import Portfolio from "../Portfolio/Portfolio";
 import NavTab from "../NavTab/NavTab";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import { useLocation } from "react-router-dom";
+/*import { useLocation } from "react-router-dom";*/
 
-function Main() {
+function Main({ isLoggedIn }) {
+  /*
   let location = useLocation();
   const isLoggedIn = location.pathname === "/" ? false : true;
+  */
   return (
     <>
       <Header isLoggedIn={isLoggedIn} />

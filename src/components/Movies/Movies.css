@@ -1,0 +1,37 @@
+.movies__not-found {
+  display: flex;
+  justify-content: center;
+  max-width: 1140px;
+  margin: 90px auto;
+  padding: 0;
+  color: #000;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  .movies__not-found {
+    max-width: calc(708px + (1140 - 708) * (100vw - 768px) / (1280 - 768));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movies__not-found {
+    max-width: 708px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+  .movies__not-found {
+    max-width: calc(300px + (708 - 300) * (100vw - 320px) / (768 - 320));
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .movies__not-found {
+    max-width: 300px;
+  }
+}
